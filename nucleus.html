@@ -78,6 +78,54 @@ h2::before {border-top:6px solid #3c763d; content:"  "; position:absolute; margi
 background:#000; padding-left:10px; padding-right:10px;
 }
 
+div.tab {
+    overflow: hidden;
+    background-color: #fff;
+	padding-bottom:20px;
+}
+
+/* Style the links inside the tab */
+div.tab a {
+    float: left;
+    display: block;
+    color:#3c763d;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+div.tab a:hover {
+    background-color: #a5daa6;
+}
+
+/* Create an active/current tablink class */
+div.tab a:focus, .current {
+    background-color: #3c763d;
+	color:#fff !important;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+	-webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 @media (max-width: 1400px) {
 	#container {padding-top:120px !important;}
 	.nav >li >a {margin-top: 0px; margin-bottom: 0px;}
@@ -203,6 +251,16 @@ $(function() {
 
 <div class="row featurette" style="width:80%; margin:0 auto; padding-top:30px;">
 
+<div class="tab">
+  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'greenbolidetab')" id="defaultOpen">The Green Bolide</a>
+  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'chassistab')">Chassis</a>
+  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'bodytab')">Body</a>
+  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'powertab')">Powertrain</a>
+  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'steertab')">Steering</a>
+</div>
+
+<div id="greenbolidetab" class="tabcontent">
+<div class="row">
 <div class="col-md-7">
 <p class="lead">The Green Bolide is a lean, mean, green machine. With a sleek, aerodynamic carbon fibre body, a bioethanol ICE and a cutting edge electronic push-start carburetor, the Green Bolide weighs only 40kg and x y z blah blah.</p>
 
@@ -221,6 +279,80 @@ $(function() {
 <img height="400" width="400" class="featurette-image center-block" src="./nucleusimg/bodymodel_crop_2.jpg" style="border:5px double #094f0a;">
 </div>
 </div>
+</div> <!--greenbolidetab-->
+
+<div id="chassistab" class="tabcontent">
+<div class="row">
+<div class="col-md-7">
+<p class="lead">I am a chassis</p>
+</div>
+<div class="col-md-5">
+<img height="400" width="400" class="featurette-image center-block" src="./nucleusimg/bodymodel_crop_2.jpg" style="border:5px double #094f0a;">
+</div>
+</div>
+</div> <!--chassistab-->
+
+<div id="bodytab" class="tabcontent">
+<div class="row">
+<div class="col-md-7">
+<p class="lead">I am the body</p>
+</div>
+<div class="col-md-5">
+<img height="400" width="400" class="featurette-image center-block" src="./nucleusimg/bodymodel_crop_2.jpg" style="border:5px double #094f0a;">
+</div>
+</div>
+</div> <!--bodytab-->
+
+<div id="powertab" class="tabcontent">
+<div class="row">
+<div class="col-md-7">
+<p class="lead">I am the powertrain</p>
+</div>
+<div class="col-md-5">
+<img height="400" width="400" class="featurette-image center-block" src="./nucleusimg/bodymodel_crop_2.jpg" style="border:5px double #094f0a;">
+</div>
+</div>
+</div> <!--powertab-->
+
+<div id="steertab" class="tabcontent">
+<div class="row">
+<div class="col-md-7">
+<p class="lead">I am the steering system</p>
+</div>
+<div class="col-md-5">
+<img height="400" width="400" class="featurette-image center-block" src="./nucleusimg/bodymodel_crop_2.jpg" style="border:5px double #094f0a;">
+</div>
+</div>
+</div> <!--steertab-->
+
+</div> <!--row featurette-->
+
+<script>
+function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" current", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " current";
+}
+
+// open default tab
+document.getElementById("defaultOpen").click();
+</script>
+
 <div id="team"></div>
 </div>
 
