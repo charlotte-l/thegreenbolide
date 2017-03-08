@@ -1,0 +1,58 @@
+body { padding-top: 50px; position: relative; }
+
+h2::before { border-top: 6px solid #3c763d; content: "  "; position: absolute; margin-top: -10px; width: 2.5em; }
+
+.divdivider { border-bottom: 1px dashed #aaa; width: 80%; margin: 0 auto; }
+
+#minimenu a { color: #eee; }
+
+.nav > li > a { margin-top: 40px; margin-bottom: 40px; outline: none; }
+
+.navbar-default .navbar-nav > li > a { color: #3c763d; }
+
+.navbar-toggle { padding: 10px; margin: 25px 15px 25px 0; }
+
+.navbar-brand { padding: 0px; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { color: #fff; background: #3c763d; }
+
+.barlink::after { position: absolute; bottom: 70%; left: 15px; width: 2.5em; height: 5px; background: #3c763d; content: ''; opacity: 0; -webkit-transition: opacity 0.3s, -webkit-transform 0.3s; -moz-transition: opacity 0.3s, -moz-transform 0.3s; transition: opacity 0.3s, transform 0.3s; -webkit-transform: translateY(10px); -moz-transform: translateY(10px); transform: translateY(10px); }
+
+.barlink:hover::after, .barlink:focus::after { opacity: 1; -webkit-transform: translateY(0px); -moz-transform: translateY(0px); transform: translateY(0px); }
+
+div.tab { overflow: hidden; background-color: #fff; padding-bottom: 20px; }
+div.tab a { position: relative; float: left; display: block; color: #3c763d; text-align: center; padding: 14px 16px; text-decoration: none; transition: 0.3s; font-size: 17px; outline: none; }
+
+.current { background-color: #3c763d; color: #fff !important; }
+
+.tabcontent { display: none; padding: 6px 12px; border-top: none; -webkit-animation: fadeEffect 1s; animation: fadeEffect 1s; }
+
+@-webkit-keyframes fadeEffect { from { opacity: 0; }
+  to { opacity: 1; } }
+@keyframes fadeEffect { from { opacity: 0; }
+  to { opacity: 1; } }
+.list-group-item:first-child { border-top-left-radius: 0px; border-top-right-radius: 0px; }
+
+.list-group-item:last-child { border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; }
+
+#carouseltext { position: absolute; top: 5%; left: 20%; z-index: 20; color: white; }
+
+#carouseltext span, #carouseltext p { background: #000; padding-left: 10px; padding-right: 10px; }
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img { width: 75vw; max-width: 1200px; height: 60vh; max-height: 600px; margin: auto; }
+
+.social { display: inline-block; padding-left: 20px; padding-right: 20px; border: none !important; }
+
+.social a img { position: relative; top: 0; transition: top ease 0.3s; }
+.social a img:hover { top: -5px; -webkit-filter: drop-shadow(2px 2px 0px rgba(9, 79, 10, 0.5)); -moz-filter: drop-shadow(2px 2px 0px rgba(9, 79, 10, 0.5)); -ms-filter: drop-shadow(2px 2px 0px rgba(9, 79, 10, 0.5)); -o-filter: drop-shadow(2px 2px 0px rgba(9, 79, 10, 0.5)); filter: drop-shadow(2px 2px 0px rgba(9, 79, 10, 0.5)); }
+
+@media (max-width: 1400px) { #container { padding-top: 120px !important; }
+  .nav > li > a { margin-top: 0px; margin-bottom: 0px; }
+  #ulstrip { margin-top: 40px; }
+  #carouseltext p { font-size: 30px !important; }
+  #carouseltext span { font-size: 20px !important; }
+  #carouseltext { left: 15%; }
+  #toptitle { font-size: 2vw !important; } }
+@media (min-width: 1950px) { #carouseltext { left: 25%; } }
+
+/*# sourceMappingURL=styles.css.map */

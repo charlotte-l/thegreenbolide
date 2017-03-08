@@ -1,146 +1,17 @@
 <!doctype HTML>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <script src="./qtip/jquery.qtip.min.js"></script>
 <link rel="stylesheet" href="./qtip/jquery.qtip.min.css">
+<link rel="stylesheet" href="./styles/styles.css">
 
-
-<style>
-
-#minimenu a {color:#eee;}
- 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-      width: 75vw;
-	  max-width:1200px;
-	  height: 60vh;
-	  max-height:600px;
-      margin: auto;
-	  border-radius:10px;
-  }
-  
-.nav >li >a {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: #3c763d;
-}
-
-.navbar-toggle {
-  padding: 10px;
-  margin: 25px 15px 25px 0;
-}
-
-.navbar-brand {padding:0px;}#
-
-.navbar-default .navbar-nav > .active {
-	color: #fff;
-	background: #3c763d;
-}
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
-.navbar-default .navbar-nav > .active > a:focus {
-    color: #fff;
-    background: #3c763d;
-}
-
-body {padding-top:50px; position:relative;}
-
-h2::before {border-top:6px solid #3c763d; content:"  "; position:absolute; margin-top:-10px; width:2.5em;}
-
-.social {display:inline-block; padding-left:20px; padding-right:20px; border:none !important;}
-
-.social a img{position: relative; top:0; transition: top ease 0.3s;}
-.social a img:hover {
-	top: -5px; 
-	-webkit-filter: drop-shadow(2px 2px 0px rgba(9,79,10,.5));
-	-moz-filter: drop-shadow(2px 2px 0px rgba(9,79,10,.5));
-	-ms-filter: drop-shadow(2px 2px 0px rgba(9,79,10,.5));
-	-o-filter: drop-shadow(2px 2px 0px rgba(9,79,10,.5));
-	filter: drop-shadow(2px 2px 0px rgba(9,79,10,.5));
-	}
-
-#carouseltext {
-	position:absolute;
-	top:5%;
-	left: 20%;
-	z-index: 20;
-	color: white;
-}
-
-#carouseltext span, #carouseltext p {
-background:#000; padding-left:10px; padding-right:10px;
-}
-
-div.tab {
-    overflow: hidden;
-    background-color: #fff;
-	padding-bottom:20px;
-}
-
-/* Style the links inside the tab */
-div.tab a {
-    float: left;
-    display: block;
-    color:#3c763d;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-/* Change background color of links on hover */
-div.tab a:hover {
-    background-color: #a5daa6;
-}
-
-/* Create an active/current tablink class */
-div.tab a:focus, .current {
-    background-color: #3c763d;
-	color:#fff !important;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border-top: none;
-	-webkit-animation: fadeEffect 1s;
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
-}
-
-@-webkit-keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@media (max-width: 1400px) {
-	#container {padding-top:120px !important;}
-	.nav >li >a {margin-top: 0px; margin-bottom: 0px;}
-	#ulstrip {margin-top:40px;}
-	#carouseltext p {font-size:30px !important;}
-	#carouseltext span {font-size:20px !important;}
-	#carouseltext {left:15%;}
-}
-
-@media (max-width:1400px) {#toptitle {font-size:2vw !important;}}
-
-@media (min-width:1950px) {#carouseltext {left:25%;}}
-
-</style>
-
+<!--animation scrolling-->
 <script>
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -149,7 +20,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top-110
+          scrollTop: target.offset().top-160
         }, 1000);
         return false;
       }
@@ -160,11 +31,11 @@ $(function() {
 
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="100">
+<body data-spy="scroll" data-target=".navbar" data-offset="170">
 
 <div id="topspacing" style="height:75px;"></div>
 
-<nav id="navi" class="navbar navbar-default navbar-fixed-top" style="padding-top:20px;width:100%; margin:0 auto; background-color:#fff; border-style:none;">
+<nav id="navi" class="navbar navbar-default navbar-fixed-top" style="padding-top:10px;width:100%; margin:0 auto; background-color:#fff; border-style:none;">
   <div class="container-fluid" style="margin-left:5%; margin-right:5%;">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -182,19 +53,19 @@ $(function() {
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	  
-      <ul id="ulstrip" class="nav navbar-nav navbar-right" style="margin-right:50px;">
-        <li class="active"><a href="#home">Home</a></li>
-		<li><a href="#greenbolide">The Green Bolide</a></li>
-		<li><a href="#team">The Team</a></li>
-		<li><a href="#contact">Contact</a></li>
+      <ul id="ulstrip" class="nav navbar-nav navbar-right" style="margin-right:50px; padding-bottom:10px;">
+        <li class="active"><a class="barlink" href="#home">Home</a></li>
+		<li><a class="barlink" href="#greenbolide">The Green Bolide</a></li>
+		<li><a class="barlink" href="#team">The Team</a></li>
+		<li><a class="barlink" href="#contact">Contact</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 <div id="container" style="padding-top:50px;">
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
 <a id="home"></a>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
 
 <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -245,25 +116,25 @@ $(function() {
 
 <div id="greenbolide" style="height:100px;"></div>
 <div style="width:100%; padding-bottom:100px;">
-<div style="border-bottom:1px dashed #aaa; width:80%; margin:0 auto;">
+<div class="divdivider">
 <h2 align="center" style="color:#094f0a;">The Green Bolide</h2>
 </div>
 
 <div class="row featurette" style="width:80%; margin:0 auto; padding-top:30px;">
 
 <div class="tab">
-  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'greenbolidetab')" id="defaultOpen">The Green Bolide</a>
-  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'chassistab')">Chassis</a>
-  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'bodytab')">Body</a>
-  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'powertab')">Powertrain</a>
-  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'steertab')">Steering</a>
+  <a href="javascript:void(0)" class="tablinks barlink" onclick="openTab(event, 'greenbolidetab')" id="defaultOpen">The Green Bolide</a>
+  <a href="javascript:void(0)" class="tablinks barlink" onclick="openTab(event, 'chassistab')">Chassis</a>
+  <a href="javascript:void(0)" class="tablinks barlink" onclick="openTab(event, 'bodytab')">Body</a>
+  <a href="javascript:void(0)" class="tablinks barlink" onclick="openTab(event, 'powertab')">Powertrain</a>
+  <a href="javascript:void(0)" class="tablinks barlink" onclick="openTab(event, 'steertab')">Steering</a>
 </div>
 
 <div id="greenbolidetab" class="tabcontent">
 <div class="row">
 <div class="col-md-7">
-<p class="lead">The Green Bolide is a lean, mean, green machine. With a sleek, aerodynamic carbon fibre body, a bioethanol ICE and a cutting edge electronic push-start carburetor, the Green Bolide weighs only 40kg and x y z blah blah.</p>
-
+<p class="lead">The Green Bolide is a lean, mean, green machine. With a sleek, aerodynamic carbon fibre body, 
+a bioethanol ICE and a cutting edge electronic push-start carburetor, the Green Bolide weighs only 40kg and x y z blah blah.</p>
 
 <h3 style="padding-top:20px; color:#094f0a;">Technical specifications:</h3>
 
@@ -285,6 +156,10 @@ $(function() {
 <div class="row">
 <div class="col-md-7">
 <p class="lead">I am a chassis</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus gravida risus, in commodo leo. 
+Nulla nunc mi, maximus eu velit sed, tincidunt laoreet turpis. Nullam in lacus velit. Mauris tellus nibh, aliquet in 
+lacinia vel, rhoncus a neque. Morbi ornare enim sed turpis tincidunt, id semper neque commodo. Aenean ac porta ante. 
+Aliquam tempus diam vel massa scelerisque gravida. Pellentesque commodo ligula vel magna suscipit, finibus hendrerit neque faucibus.</p>
 </div>
 <div class="col-md-5">
 <img height="400" width="400" class="featurette-image center-block" src="./nucleusimg/bodymodel_crop_2.jpg" style="border:5px double #094f0a;">
@@ -296,6 +171,10 @@ $(function() {
 <div class="row">
 <div class="col-md-7">
 <p class="lead">I am the body</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus gravida risus, in commodo leo. 
+Nulla nunc mi, maximus eu velit sed, tincidunt laoreet turpis. Nullam in lacus velit. Mauris tellus nibh, aliquet in lacinia vel, 
+rhoncus a neque. Morbi ornare enim sed turpis tincidunt, id semper neque commodo. Aenean ac porta ante. Aliquam tempus diam vel massa
+ scelerisque gravida. Pellentesque commodo ligula vel magna suscipit, finibus hendrerit neque faucibus.</p>
 </div>
 <div class="col-md-5">
 <img height="400" width="400" class="featurette-image center-block" src="./nucleusimg/bodymodel_crop_2.jpg" style="border:5px double #094f0a;">
@@ -307,6 +186,10 @@ $(function() {
 <div class="row">
 <div class="col-md-7">
 <p class="lead">I am the powertrain</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus gravida risus, in commodo leo. 
+Nulla nunc mi, maximus eu velit sed, tincidunt laoreet turpis. Nullam in lacus velit. Mauris tellus nibh, aliquet in lacinia vel, 
+rhoncus a neque. Morbi ornare enim sed turpis tincidunt, id semper neque commodo. Aenean ac porta ante. 
+Aliquam tempus diam vel massa scelerisque gravida. Pellentesque commodo ligula vel magna suscipit, finibus hendrerit neque faucibus.</p>
 </div>
 <div class="col-md-5">
 <img height="400" width="400" class="featurette-image center-block" src="./nucleusimg/bodymodel_crop_2.jpg" style="border:5px double #094f0a;">
@@ -318,6 +201,10 @@ $(function() {
 <div class="row">
 <div class="col-md-7">
 <p class="lead">I am the steering system</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus gravida risus, in commodo leo. 
+Nulla nunc mi, maximus eu velit sed, tincidunt laoreet turpis. Nullam in lacus velit. Mauris tellus nibh, aliquet in lacinia vel, 
+rhoncus a neque. Morbi ornare enim sed turpis tincidunt, id semper neque commodo. Aenean ac porta ante. Aliquam tempus diam vel massa 
+scelerisque gravida. Pellentesque commodo ligula vel magna suscipit, finibus hendrerit neque faucibus.</p>
 </div>
 <div class="col-md-5">
 <img height="400" width="400" class="featurette-image center-block" src="./nucleusimg/bodymodel_crop_2.jpg" style="border:5px double #094f0a;">
@@ -353,12 +240,10 @@ function openTab(evt, tabName) {
 document.getElementById("defaultOpen").click();
 </script>
 
-<div id="team"></div>
 </div>
-
 <div style="width:100%; text-align:center; padding-bottom:100px;">
-<div style="border-bottom:1px dashed #aaa; width:80%; margin:0 auto;">
-<h2 align="center" style="color:#094f0a;">The Team</h2>
+<div class="divdivider">
+<h2 id="team" align="center" style="color:#094f0a;">The Team</h2>
 </div>
 <div style="height:30px;"></div>
 <img height="618" width="910" class="featurette-image center-block" src="./nucleusimg/teamphoto_3.jpg" style="border:5px double #094f0a;" usemap="#Map">
@@ -391,13 +276,12 @@ $('#Josh').qtip({ content:{title:'Josh',text:'Electrical specialist'}, position:
 
 <p class="lead" style="padding-top:30px;">Team Nucleus is a group of 10 students from various degree disciplines studying at Northumbria University.</p>
 <p class="lead"><small>Mouse over the pins to find out more.</small></p>
-<a id="contact"></a>
 </div>
 
 <div class="row" style="width:100%; padding-bottom:100px; text-align:center;">
 
-<div style="border-bottom:1px dashed #aaa; width:80%; margin:0 auto;">
-<h2 style="color:#094f0a;">Connect With Us</h2>
+<div class="divdivider">
+<h2 id="contact" style="color:#094f0a;">Connect With Us</h2>
 </div>
 
 <div style="padding-top:30px;"></div>
@@ -437,7 +321,6 @@ var line = "<strong>Email us: " + email+"</strong>";
 </div>
 
 </div>
-
 </div>
 
 <div id="footer" class="container" style="height:75px; background:url(./nucleusimg/footer.png); background-size:cover; width:100%; color:#fff;">
