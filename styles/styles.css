@@ -35,7 +35,7 @@ div.tab a { position: relative; float: left; display: block; color: #3c763d; tex
 
 .list-group-item:last-child { border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; }
 
-#carouseltext { position: absolute; top: 5%; left: 20%; z-index: 20; color: white; }
+#carouseltext { position: absolute; top: 5%; left: 15%; z-index: 20; color: white; }
 
 #carouseltext span, #carouseltext p { background: #000; padding-left: 10px; padding-right: 10px; }
 
@@ -46,6 +46,8 @@ div.tab a { position: relative; float: left; display: block; color: #3c763d; tex
 .social a img { position: relative; top: 0; transition: top ease 0.3s; }
 .social a img:hover { top: -5px; -webkit-filter: drop-shadow(2px 2px 0px rgba(9, 79, 10, 0.5)); -moz-filter: drop-shadow(2px 2px 0px rgba(9, 79, 10, 0.5)); -ms-filter: drop-shadow(2px 2px 0px rgba(9, 79, 10, 0.5)); -o-filter: drop-shadow(2px 2px 0px rgba(9, 79, 10, 0.5)); filter: drop-shadow(2px 2px 0px rgba(9, 79, 10, 0.5)); }
 
+.vcenter {display: flex; align-items: center; flex-wrap: wrap;}
+
 @media (max-width: 1400px) { #container { padding-top: 120px !important; }
   .nav > li > a { margin-top: 0px; margin-bottom: 0px; }
   #ulstrip { margin-top: 40px; }
@@ -53,6 +55,8 @@ div.tab a { position: relative; float: left; display: block; color: #3c763d; tex
   #carouseltext span { font-size: 20px !important; }
   #carouseltext { left: 15%; }
   #toptitle { font-size: 2vw !important; } }
-@media (min-width: 1950px) { #carouseltext { left: 25%; } }
+  
+@media (min-width: 1700px) { #carouseltext { left: 20%; } }
+@media (min-width: 1950px) { #carouseltext { left: 26%; } }
 
 /*# sourceMappingURL=styles.css.map */
